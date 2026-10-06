@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Sponge Park Hunt",
+    "slug": "sponge-park-hunt",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E3F1EA",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Scan the QR codes on park signs to unlock treasure hunt stations.",
+          "barcodeScannerEnabled": true
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Shows how close you are to the next treasure and tags problem reports with where you are in the park."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Take photos at the photo-point and of problems you report.",
+          "photosPermission": "Attach a photo to a problem report."
+        }
+      ]
+    ],
+    "scheme": "spongepark"
+  }
+}
